@@ -42,14 +42,14 @@
             if (interval) {
                 clearInterval(interval);
             }
-            displayValue(timeLeft.toFixed(2));
+            displayValue(timeLeft.toFixed(1));
             interval = setInterval(() => {
-                --timeLeft
-                displayValue(timeLeft.toFixed(2));
-                if (!timeLeft) {
+                timeLeft -= 0.1
+                displayValue(timeLeft.toFixed(1));
+                if (timeLeft <= 0) {
                     onTimeOver();
                 }
-            }, 1000)
+            }, 100)
         }
 
         let onTimeOver = () => {
