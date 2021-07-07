@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer creation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: max(4vw, 30px);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        main {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        
+        input{
+            width: max(60px, 8vw);
+            text-align: right;
+        }
+
+        form>*{
+            margin-top:20px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <form method="GET" action="./timer.html">
+            <div>
+                <label for="duration">:</label>
+                <input type="number" name="duration">
+            </div>
+            <button type="submit">Start</button>
+        </form>
+    </main>
+</body>
+
+</html>
