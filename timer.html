@@ -36,6 +36,7 @@
     </style>
     <script>
         let interval, duration = 60, timeDisplay, bigButton;
+        let sound = new Audio('./timeup.mp3')
         let restart = () => {
             bigButton.classList.remove('time-up');
             timeLeft = duration;
@@ -57,7 +58,7 @@
                 clearInterval(interval);
             }
             bigButton.classList.add('time-up');
-            new Audio('./timeup.mp3').play()
+            sound.play()
             displayValue("Again");
         }
 
